@@ -83,16 +83,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        game1.backgroundColor = UIColor.magenta
-        game2.isHidden = true
-        game3.isHidden = true
-        game4.isHidden = true
-        game5.isHidden = true
-        game6.isHidden = true
-        game7.isHidden = true
-        game8.isHidden = true
-        game9.isHidden = true
-        game10.isHidden = true
+        resetScore()
+
+    
     }
 
     
@@ -103,9 +96,23 @@ class ViewController: UIViewController {
         ballCount.text = "\(player1Score + deadBall + player2Score)"
         
         scoring()
+        updateScore()
+        
 
 
     }
+    
+    @IBAction func player1Subtract(_ sender: Any)
+    {
+        player1Score = player1Score - 1
+        score1.text = "\(player1Score)"
+        ballCount.text = "\(player1Score + deadBall + player2Score)"
+        
+        
+        updateScore()
+        
+    }
+    
     
     
     
@@ -116,9 +123,20 @@ class ViewController: UIViewController {
         ballCount.text = "\(player1Score + deadBall + player2Score)"
 
         scoring()
-
+        updateScore()
         
     }
+    
+    @IBAction func player2Subtract(_ sender: Any)
+    {
+        player2Score = player2Score - 1
+        score2.text = "\(player2Score)"
+        ballCount.text = "\(player1Score + deadBall + player2Score)"
+        
+        updateScore()
+        
+    }
+    
 
     @IBAction func deadBallBtnPressed(_ sender: Any)
     {
@@ -127,30 +145,48 @@ class ViewController: UIViewController {
         ballCount.text = "\(player1Score + deadBall + player2Score)"
         
         scoring()
-        
+        updateScore()
 
+    }
+    
+    @IBAction func deadBallSubtract(_ sender: Any)
+    {
+        deadBall = deadBall - 1
+        deadBallScore.text = "\(deadBall)"
+        ballCount.text = "\(player1Score + deadBall + player2Score)"
+        
+      updateScore()
+        
+    }
+    
+    @IBAction func newGameBtnPressed(_ sender: UIButton)
+    {
+        resetScore()
     }
     
 
     
     func scoring()
     {
+        
+        
+       
+        
         if (player1Score + deadBall + player2Score) == 11
+
         {
-            game2.backgroundColor = UIColor.magenta
+
             game2.isHidden = false
-            game1.backgroundColor = UIColor.clear
             
             p1_1.text = "\(player1Score)"
             p2_1.text = "\(player2Score)"
             d_1.text = "\(deadBall)"
         }
         
+        
         if (player1Score + deadBall + player2Score) == 22
         {
-            game3.backgroundColor = UIColor.magenta
             game3.isHidden = false
-            game2.backgroundColor = UIColor.clear
             
             p1_2.text = "\(player1Score - Int(p1_1.text!)!)"
             p2_2.text = "\(player2Score - Int(p2_1.text!)!)"
@@ -159,9 +195,7 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 33
         {
-            game4.backgroundColor = UIColor.magenta
             game4.isHidden = false
-            game3.backgroundColor = UIColor.clear
             
             p1_3.text = "\(player1Score - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_3.text = "\(player2Score - Int(p2_2.text!)! - Int(p2_1.text!)!)"
@@ -170,10 +204,8 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 44
         {
-            game5.backgroundColor = UIColor.magenta
             game5.isHidden = false
-            game4.backgroundColor = UIColor.clear
-            
+
             p1_4.text = "\(player1Score - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_4.text = "\(player2Score - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
             d_4.text = "\(deadBall - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
@@ -181,9 +213,7 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 55
         {
-            game6.backgroundColor = UIColor.magenta
             game6.isHidden = false
-            game5.backgroundColor = UIColor.clear
             
             p1_5.text = "\(player1Score - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_5.text = "\(player2Score - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
@@ -192,10 +222,8 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 66
         {
-            game7.backgroundColor = UIColor.magenta
             game7.isHidden = false
-            game6.backgroundColor = UIColor.clear
-            
+
             p1_6.text = "\(player1Score - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_6.text = "\(player2Score - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
             d_6.text = "\(deadBall - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
@@ -203,9 +231,7 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 77
         {
-            game8.backgroundColor = UIColor.magenta
             game8.isHidden = false
-            game7.backgroundColor = UIColor.clear
             
             p1_7.text = "\(player1Score - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_7.text = "\(player2Score - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
@@ -214,9 +240,7 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 88
         {
-            game9.backgroundColor = UIColor.magenta
             game9.isHidden = false
-            game8.backgroundColor = UIColor.clear
             
             p1_8.text = "\(player1Score - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_8.text = "\(player2Score - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
@@ -225,9 +249,7 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 99
         {
-            game10.backgroundColor = UIColor.magenta
             game10.isHidden = false
-            game9.backgroundColor = UIColor.clear
             
             p1_9.text = "\(player1Score - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_9.text = "\(player2Score - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
@@ -245,13 +267,190 @@ class ViewController: UIViewController {
         
     }
     
-    //    func resetScore()
-    //    {
-    //        player1Score = 0
-    //        player2Score = 0
-    //        deadBall = 0
-    //    }
+    
+    func updateScore()
+
+    {
+        if Int(ballCount.text!)! < 11
+        {
+            
+            p1_1.text = "\(player1Score)"
+            p2_1.text = "\(player2Score)"
+            d_1.text = "\(deadBall)"
+            
+            game1.backgroundColor = UIColor.magenta
+            game2.backgroundColor = UIColor.clear
+
+            
+            
+            
+        }
+
+        if (Int(ballCount.text!)! >= 11) && (Int(ballCount.text!)! < 22)
+        {
+            p1_2.text = "\(player1Score - Int(p1_1.text!)!)"
+            p2_2.text = "\(player2Score - Int(p2_1.text!)!)"
+            d_2.text = "\(deadBall - Int(d_1.text!)!)"
+            
+            game3.backgroundColor = UIColor.clear
+            game2.backgroundColor = UIColor.magenta
+            game1.backgroundColor = UIColor.clear
+            
+            
+        }
+        
+        if (Int(ballCount.text!)! >= 22) && (Int(ballCount.text!)! < 33)
+        {
+            p1_3.text = "\(player1Score - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_3.text = "\(player2Score - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_3.text = "\(deadBall - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            game4.backgroundColor = UIColor.clear
+            game3.backgroundColor = UIColor.magenta
+            game2.backgroundColor = UIColor.clear
+           
+            
+        }
+        
+        if (Int(ballCount.text!)! >= 33) && (Int(ballCount.text!)! < 44)
+        {
+            p1_4.text = "\(player1Score - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_4.text = "\(player2Score - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_4.text = "\(deadBall - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            game5.backgroundColor = UIColor.clear
+            game4.backgroundColor = UIColor.magenta
+            game3.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 44) && (Int(ballCount.text!)! < 55)
+        {
+            p1_5.text = "\(player1Score - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_5.text = "\(player2Score - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_5.text = "\(deadBall - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            game6.backgroundColor = UIColor.clear
+            game5.backgroundColor = UIColor.magenta
+            game4.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 55) && (Int(ballCount.text!)! < 66)
+        {
+            p1_6.text = "\(player1Score - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_6.text = "\(player2Score - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_6.text = "\(deadBall - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            game7.backgroundColor = UIColor.clear
+            game6.backgroundColor = UIColor.magenta
+            game5.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 66) && (Int(ballCount.text!)! < 77)
+        {
+            p1_7.text = "\(player1Score - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_7.text = "\(player2Score - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_7.text = "\(deadBall - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)! )"
+            
+            game8.backgroundColor = UIColor.clear
+            game7.backgroundColor = UIColor.magenta
+            game6.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 77) && (Int(ballCount.text!)! < 88)
+        {
+            p1_8.text = "\(player1Score - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_8.text = "\(player2Score - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_8.text = "\(deadBall - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            game9.backgroundColor = UIColor.clear
+            game8.backgroundColor = UIColor.magenta
+            game7.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 88) && (Int(ballCount.text!)! < 99)
+        {
+            p1_9.text = "\(player1Score - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_9.text = "\(player2Score - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_9.text = "\(deadBall - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            game10.backgroundColor = UIColor.clear
+            game9.backgroundColor = UIColor.magenta
+            game8.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 99) && (Int(ballCount.text!)! < 110)
+        {
+            p1_10.text = "\(player1Score - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_10.text = "\(player2Score - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_10.text = "\(deadBall - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            
+            game10.backgroundColor = UIColor.magenta
+            game9.backgroundColor = UIColor.clear
+        }
+        
+        
+
+    }
+
+    func resetScore()
+    {
+        
+        
+        player1Score = 0
+        player2Score = 0
+        deadBall = 0
+        ballCount.text = ""
+        
+        p1_1.text = ""
+        p1_2.text = ""
+        p1_3.text = ""
+        p1_4.text = ""
+        p1_5.text = ""
+        p1_6.text = ""
+        p1_7.text = ""
+        p1_8.text = ""
+        p1_9.text = ""
+        p1_10.text = ""
+        
+        p2_1.text = ""
+        p2_2.text = ""
+        p2_3.text = ""
+        p2_4.text = ""
+        p2_5.text = ""
+        p2_6.text = ""
+        p2_7.text = ""
+        p2_8.text = ""
+        p2_9.text = ""
+        p2_10.text = ""
+        
+        d_1.text = ""
+        d_2.text = ""
+        d_3.text = ""
+        d_4.text = ""
+        d_5.text = ""
+        d_6.text = ""
+        d_7.text = ""
+        d_8.text = ""
+        d_9.text = ""
+        d_10.text = ""
+        
+//        game1.backgroundColor = UIColor.magenta
+        game2.isHidden = true
+        game3.isHidden = true
+        game4.isHidden = true
+        game5.isHidden = true
+        game6.isHidden = true
+        game7.isHidden = true
+        game8.isHidden = true
+        game9.isHidden = true
+        game10.isHidden = true
+        
+    }
+    
+    
 
 }
+
 
 
