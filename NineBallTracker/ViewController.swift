@@ -30,6 +30,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var deadBallScore: UILabel!
     @IBOutlet weak var ballCount: UILabel!
     
+    @IBOutlet weak var p1Remainder: UILabel!
+    @IBOutlet weak var p2Remainder: UILabel!
+    
+    
     @IBOutlet weak var p1_1: UILabel!
     @IBOutlet weak var p2_1: UILabel!
     @IBOutlet weak var d_1: UILabel!
@@ -90,6 +94,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         resetScore()
+        
 
         skillLevelLabelp1.text = p1SkillLevel
         skillLevelLabelp2.text = p2SkillLevel
@@ -109,6 +114,7 @@ class ViewController: UIViewController {
         scoring()
         updateScore()
         skillLevelReached()
+        remainder()
         
 
 
@@ -122,6 +128,7 @@ class ViewController: UIViewController {
         
         
         updateScore()
+        remainder()
         
     }
     
@@ -137,6 +144,7 @@ class ViewController: UIViewController {
         scoring()
         updateScore()
         skillLevelReached()
+        remainder()
         
     }
     
@@ -147,6 +155,7 @@ class ViewController: UIViewController {
         ballCount.text = "\(player1Score + deadBall + player2Score)"
         
         updateScore()
+        remainder()
         
     }
     
@@ -159,6 +168,7 @@ class ViewController: UIViewController {
         
         scoring()
         updateScore()
+        
 
     }
     
@@ -169,6 +179,7 @@ class ViewController: UIViewController {
         ballCount.text = "\(player1Score + deadBall + player2Score)"
         
       updateScore()
+        
         
     }
     
@@ -449,7 +460,7 @@ class ViewController: UIViewController {
         d_9.text = ""
         d_10.text = ""
         
-//        game1.backgroundColor = UIColor.magenta
+
         game2.isHidden = true
         game3.isHidden = true
         game4.isHidden = true
@@ -589,8 +600,108 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    func remainder()
+    {
+        if skillLevelLabelp1.text == "1"
+        {
+            p1Remainder.text = "\(16 - Int(score1.text!)!)"
+        }
         
+        if skillLevelLabelp2.text == "1"
+        {
+            p2Remainder.text = "\(16 - Int(score2.text!)!)"
+        }
         
+        if skillLevelLabelp1.text == "2"
+        {
+            p1Remainder.text = "\(21 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "2"
+        {
+            p2Remainder.text = "\(21 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "3"
+        {
+            p1Remainder.text = "\(27 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "3"
+        {
+            p2Remainder.text = "\(27 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "4"
+        {
+            p1Remainder.text = "\(33 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "4"
+        {
+            p2Remainder.text = "\(33 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "5"
+        {
+            p1Remainder.text = "\(40 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "5"
+        {
+            p2Remainder.text = "\(40 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "6"
+        {
+            p1Remainder.text = "\(48 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "6"
+        {
+            p2Remainder.text = "\(48 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "7"
+        {
+            p1Remainder.text = "\(57 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "7"
+        {
+            p2Remainder.text = "\(57 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "8"
+        {
+            p1Remainder.text = "\(67 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "8"
+        {
+            p2Remainder.text = "\(67 - Int(score2.text!)!)"
+        }
+        
+        if skillLevelLabelp1.text == "9"
+        {
+            p1Remainder.text = "\(77 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "9"
+        {
+            p2Remainder.text = "\(77 - Int(score2.text!)!)"
+        }
+        if skillLevelLabelp1.text == "10"
+        {
+            p1Remainder.text = "\(87 - Int(score1.text!)!)"
+        }
+        
+        if skillLevelLabelp2.text == "10"
+        {
+            p2Remainder.text = "\(87 - Int(score2.text!)!)"
+        }
         
     }
     
