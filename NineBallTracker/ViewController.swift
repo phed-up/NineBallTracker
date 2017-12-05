@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var p1SkillLevel = ""
+    var p2SkillLevel = ""
+    
     var player1Score = 0
     var player2Score = 0
     var deadBall = 0
@@ -17,7 +20,10 @@ class ViewController: UIViewController {
     var player2RUnningScore = 0
     var deadBallRunningScore = 0
     
-
+    @IBOutlet weak var skillLevelLabelp1: UILabel!
+    @IBOutlet weak var skillLevelLabelp2: UILabel!
+    @IBOutlet weak var winnerLabel: UILabel!
+    
 
     @IBOutlet weak var score1: UILabel!
     @IBOutlet weak var score2: UILabel!
@@ -85,6 +91,11 @@ class ViewController: UIViewController {
         
         resetScore()
 
+        skillLevelLabelp1.text = p1SkillLevel
+        skillLevelLabelp2.text = p2SkillLevel
+        
+        
+       
     
     }
 
@@ -97,6 +108,7 @@ class ViewController: UIViewController {
         
         scoring()
         updateScore()
+        skillLevelReached()
         
 
 
@@ -124,6 +136,7 @@ class ViewController: UIViewController {
 
         scoring()
         updateScore()
+        skillLevelReached()
         
     }
     
@@ -162,6 +175,7 @@ class ViewController: UIViewController {
     @IBAction func newGameBtnPressed(_ sender: UIButton)
     {
         resetScore()
+        performSegue(withIdentifier: "firstVC", sender: self)
     }
     
 
@@ -446,8 +460,139 @@ class ViewController: UIViewController {
         game9.isHidden = true
         game10.isHidden = true
         
+        winnerLabel.isHidden = true
+        
     }
     
+
+    func skillLevelReached()
+    {
+       
+        if (skillLevelLabelp1.text == "1") && (score1.text == "16")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "1") && (score2.text == "16")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "2") && (score1.text == "21")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "2") && (score2.text == "21")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "3") && (score1.text == "27")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "3") && (score2.text == "27")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "4") && (score1.text == "33")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "4") && (score2.text == "33")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "5") && (score1.text == "40")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "5") && (score2.text == "40")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "6") && (score1.text == "48")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "6") && (score2.text == "48")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "7") && (score1.text == "57")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "7") && (score2.text == "57")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "8") && (score1.text == "67")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "8") && (score2.text == "67")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "9") && (score1.text == "77")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "9") && (score2.text == "77")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        if (skillLevelLabelp1.text == "10") && (score1.text == "87")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 1 WINNER!"
+        }
+        
+        if (skillLevelLabelp2.text == "10") && (score2.text == "87")
+        {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "PLAYER 2 WINNER!"
+        }
+        
+        
+        
+        
+        
+    }
     
 
 }

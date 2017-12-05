@@ -12,6 +12,7 @@
 		E7D88C991FD3B158004D461C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D88C971FD3B158004D461C /* Main.storyboard */; };
 		E7D88C9B1FD3B158004D461C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D88C9A1FD3B158004D461C /* Assets.xcassets */; };
 		E7D88C9E1FD3B158004D461C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D88C9C1FD3B158004D461C /* LaunchScreen.storyboard */; };
+		E7D88CA61FD5BBD1004D461C /* skillLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D88CA51FD5BBD1004D461C /* skillLevelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E7D88C9A1FD3B158004D461C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7D88C9D1FD3B158004D461C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7D88C9F1FD3B158004D461C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D88CA51FD5BBD1004D461C /* skillLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skillLevelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				E7D88C931FD3B158004D461C /* AppDelegate.swift */,
 				E7D88C951FD3B158004D461C /* ViewController.swift */,
+				E7D88CA51FD5BBD1004D461C /* skillLevelViewController.swift */,
 				E7D88C971FD3B158004D461C /* Main.storyboard */,
 				E7D88C9A1FD3B158004D461C /* Assets.xcassets */,
 				E7D88C9C1FD3B158004D461C /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D88C961FD3B158004D461C /* ViewController.swift in Sources */,
+				E7D88CA61FD5BBD1004D461C /* skillLevelViewController.swift in Sources */,
 				E7D88C941FD3B158004D461C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
