@@ -954,26 +954,45 @@
                                     <constraint firstItem="n4Y-PN-Xmw" firstAttribute="centerY" secondItem="kXm-xT-mNM" secondAttribute="centerY" id="sjQ-UN-Kal"/>
                                 </constraints>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-9D-5M1">
-                                <rect key="frame" x="200" y="174" width="168" height="60"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-OI-zZb" userLabel="WinnerLabels">
+                                <rect key="frame" x="24" y="169.5" width="520" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tov-TY-yu6">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AGz-Pq-e9F"/>
+                                            <constraint firstAttribute="width" constant="250" id="Q35-Xp-5QS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-9D-5M1">
+                                        <rect key="frame" x="270" y="0.0" width="250" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="mfI-ME-lma"/>
+                                            <constraint firstAttribute="height" constant="60" id="wL4-4e-ivy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9zl-9D-5M1" firstAttribute="centerY" secondItem="BRQ-hJ-xQl" secondAttribute="centerY" id="9XH-DH-wL1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xix-jb-BJo" secondAttribute="bottom" constant="20" id="BSy-Mq-aNb"/>
+                            <constraint firstItem="E4V-OI-zZb" firstAttribute="centerY" secondItem="BRQ-hJ-xQl" secondAttribute="centerY" id="Hap-et-Gfp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xix-jb-BJo" secondAttribute="trailing" constant="20" id="JOf-YH-Wbj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GVp-Pg-Z1E" secondAttribute="bottom" constant="0.5" id="RKM-gf-3Q5"/>
                             <constraint firstItem="BB7-r0-Q6n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="U47-wy-MM2"/>
                             <constraint firstItem="BRQ-hJ-xQl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZPU-bE-Oll"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oqA-29-ZIl" secondAttribute="bottom" constant="10" id="g4e-JF-zaX"/>
-                            <constraint firstItem="9zl-9D-5M1" firstAttribute="centerX" secondItem="BRQ-hJ-xQl" secondAttribute="centerX" id="i72-ag-4de"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GVp-Pg-Z1E" secondAttribute="trailing" constant="20" id="iW1-fp-hmo"/>
                             <constraint firstItem="oqA-29-ZIl" firstAttribute="top" secondItem="BRQ-hJ-xQl" secondAttribute="bottom" constant="10" id="o3C-OK-HTW"/>
                             <constraint firstItem="BB7-r0-Q6n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rve-DQ-reY"/>
+                            <constraint firstItem="E4V-OI-zZb" firstAttribute="centerX" secondItem="BRQ-hJ-xQl" secondAttribute="centerX" id="rwv-pd-R8U"/>
                             <constraint firstItem="oqA-29-ZIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="urR-pR-9Hs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1036,6 +1055,7 @@
                         <outlet property="skillLevelLabelp1" destination="kXm-xT-mNM" id="Qh6-Yt-8fI"/>
                         <outlet property="skillLevelLabelp2" destination="n4Y-PN-Xmw" id="R4s-c2-cbP"/>
                         <outlet property="winnerLabel" destination="9zl-9D-5M1" id="kp1-6K-FaQ"/>
+                        <outlet property="winnerNameLabel" destination="tov-TY-yu6" id="HQz-9H-sfg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
