@@ -8,7 +8,22 @@
 
 import UIKit
 
-class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return (true)
+        
+    }
+    
+
+
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -114,13 +129,10 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
             
             
             
-            
-            
-            
-            
-           
-            
         }
+    
     }
+    
+    
 
 }
