@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -32,6 +33,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var p1Remainder: UILabel!
     @IBOutlet weak var p2Remainder: UILabel!
+    
+    @IBOutlet weak var player1Btn: UIButton!
+    @IBOutlet weak var player1SubtractBtn: UIButton!
+    @IBOutlet weak var player2Btn: UIButton!
+    @IBOutlet weak var player2SubtractBtn: UIButton!
+    @IBOutlet weak var deadBallBtn: UIButton!
+    @IBOutlet weak var deadBallSubtractBtn: UIButton!
     
     
     @IBOutlet weak var p1_1: UILabel!
@@ -115,6 +123,7 @@ class ViewController: UIViewController {
         updateScore()
         skillLevelReached()
         remainder()
+        playSound(soundFileName: "ballSunk")
         
 
 
@@ -145,6 +154,7 @@ class ViewController: UIViewController {
         updateScore()
         skillLevelReached()
         remainder()
+        playSound(soundFileName: "ballSunk")
         
     }
     
@@ -168,6 +178,7 @@ class ViewController: UIViewController {
         
         scoring()
         updateScore()
+        
         
 
     }
@@ -483,122 +494,220 @@ class ViewController: UIViewController {
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
         }
         
         if (skillLevelLabelp2.text == "1") && (score2.text == "16")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "2") && (score1.text == "21")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "2") && (score2.text == "21")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "3") && (score1.text == "27")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "3") && (score2.text == "27")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "4") && (score1.text == "33")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "4") && (score2.text == "33")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "5") && (score1.text == "40")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "5") && (score2.text == "40")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "6") && (score1.text == "48")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "6") && (score2.text == "48")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "7") && (score1.text == "57")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "7") && (score2.text == "57")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "8") && (score1.text == "67")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "8") && (score2.text == "67")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "9") && (score1.text == "77")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "9") && (score2.text == "77")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp1.text == "10") && (score1.text == "87")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
         
         if (skillLevelLabelp2.text == "10") && (score2.text == "87")
         {
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
+            playSound(soundFileName: "Applause")
+            hideButtons()
+
+
+
         }
-        
+
         
     }
     
@@ -705,6 +814,27 @@ class ViewController: UIViewController {
         
     }
     
+    func playSound(soundFileName: String)
+    {
+        if let soundURL = Bundle.main.url(forResource: soundFileName, withExtension: "wav")
+            
+        {
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound)
+            // Play
+            AudioServicesPlaySystemSound(mySound);
+        }
+    }
+    
+    func hideButtons()
+    {
+        player1Btn.backgroundColor = UIColor.clear
+        player1SubtractBtn.backgroundColor = UIColor.clear
+        player2Btn.backgroundColor = UIColor.clear
+        player2SubtractBtn.backgroundColor = UIColor.clear
+        deadBallBtn.backgroundColor = UIColor.clear
+        deadBallSubtractBtn.backgroundColor = UIColor.clear
+    }
 
 }
 

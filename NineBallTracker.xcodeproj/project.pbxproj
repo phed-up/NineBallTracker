@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7C473141FD7602F00F9AAC3 /* Applause.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7C473131FD7602F00F9AAC3 /* Applause.wav */; };
+		E7C473161FD76EA900F9AAC3 /* ballSunk.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7C473151FD76EA900F9AAC3 /* ballSunk.wav */; };
 		E7D88C941FD3B158004D461C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D88C931FD3B158004D461C /* AppDelegate.swift */; };
 		E7D88C961FD3B158004D461C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D88C951FD3B158004D461C /* ViewController.swift */; };
 		E7D88C991FD3B158004D461C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D88C971FD3B158004D461C /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7C473131FD7602F00F9AAC3 /* Applause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Applause.wav; sourceTree = "<group>"; };
+		E7C473151FD76EA900F9AAC3 /* ballSunk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ballSunk.wav; sourceTree = "<group>"; };
 		E7D88C901FD3B158004D461C /* NineBallTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineBallTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D88C931FD3B158004D461C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7D88C951FD3B158004D461C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				E7D88C9A1FD3B158004D461C /* Assets.xcassets */,
 				E7D88C9C1FD3B158004D461C /* LaunchScreen.storyboard */,
 				E7D88C9F1FD3B158004D461C /* Info.plist */,
+				E7C473131FD7602F00F9AAC3 /* Applause.wav */,
+				E7C473151FD76EA900F9AAC3 /* ballSunk.wav */,
 			);
 			path = NineBallTracker;
 			sourceTree = "<group>";
@@ -126,7 +132,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C473141FD7602F00F9AAC3 /* Applause.wav in Resources */,
 				E7D88C9E1FD3B158004D461C /* LaunchScreen.storyboard in Resources */,
+				E7C473161FD76EA900F9AAC3 /* ballSunk.wav in Resources */,
 				E7D88C9B1FD3B158004D461C /* Assets.xcassets in Resources */,
 				E7D88C991FD3B158004D461C /* Main.storyboard in Resources */,
 			);

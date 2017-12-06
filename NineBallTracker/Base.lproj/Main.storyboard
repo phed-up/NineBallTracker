@@ -922,7 +922,7 @@
                                     <constraint firstItem="n4Y-PN-Xmw" firstAttribute="centerY" secondItem="kXm-xT-mNM" secondAttribute="centerY" id="sjQ-UN-Kal"/>
                                 </constraints>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-9D-5M1">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-9D-5M1">
                                 <rect key="frame" x="200" y="130" width="168" height="60"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -931,14 +931,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9zl-9D-5M1" firstAttribute="centerY" secondItem="BRQ-hJ-xQl" secondAttribute="centerY" id="9XH-DH-wL1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xix-jb-BJo" secondAttribute="bottom" constant="20" id="BSy-Mq-aNb"/>
-                            <constraint firstItem="9zl-9D-5M1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DMA-Eh-oLN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xix-jb-BJo" secondAttribute="trailing" constant="20" id="JOf-YH-Wbj"/>
-                            <constraint firstItem="9zl-9D-5M1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MVS-Aw-jTn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GVp-Pg-Z1E" secondAttribute="bottom" constant="0.5" id="RKM-gf-3Q5"/>
                             <constraint firstItem="BB7-r0-Q6n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="U47-wy-MM2"/>
                             <constraint firstItem="BRQ-hJ-xQl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZPU-bE-Oll"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oqA-29-ZIl" secondAttribute="bottom" constant="10" id="g4e-JF-zaX"/>
+                            <constraint firstItem="9zl-9D-5M1" firstAttribute="centerX" secondItem="BRQ-hJ-xQl" secondAttribute="centerX" id="i72-ag-4de"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GVp-Pg-Z1E" secondAttribute="trailing" constant="20" id="iW1-fp-hmo"/>
                             <constraint firstItem="oqA-29-ZIl" firstAttribute="top" secondItem="BRQ-hJ-xQl" secondAttribute="bottom" constant="10" id="o3C-OK-HTW"/>
                             <constraint firstItem="BB7-r0-Q6n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rve-DQ-reY"/>
@@ -958,7 +958,9 @@
                         <outlet property="d_7" destination="5rs-9x-IM9" id="bhp-D4-jGc"/>
                         <outlet property="d_8" destination="AWM-7l-ulm" id="OGi-nO-Gyx"/>
                         <outlet property="d_9" destination="2VN-A5-CvD" id="nyQ-6u-TdJ"/>
+                        <outlet property="deadBallBtn" destination="1IZ-Dw-Dna" id="NRZ-3A-t38"/>
                         <outlet property="deadBallScore" destination="UeX-i0-ghJ" id="2Qm-mM-VpS"/>
+                        <outlet property="deadBallSubtractBtn" destination="H0O-W5-mgu" id="etB-va-TjG"/>
                         <outlet property="game1" destination="zbf-gM-E5a" id="fq3-oP-zh8"/>
                         <outlet property="game10" destination="iQG-hK-4fg" id="8Pc-Cj-ite"/>
                         <outlet property="game2" destination="HCX-J5-aoC" id="6cG-tz-HFA"/>
@@ -991,6 +993,10 @@
                         <outlet property="p2_7" destination="8AC-p0-LES" id="5No-EA-e3R"/>
                         <outlet property="p2_8" destination="NuT-oi-TaH" id="DHs-xb-iYv"/>
                         <outlet property="p2_9" destination="a6j-K2-Eyi" id="72D-Jl-bOl"/>
+                        <outlet property="player1Btn" destination="hiG-fI-qgP" id="pgR-oJ-Z56"/>
+                        <outlet property="player1SubtractBtn" destination="9LN-kM-Csy" id="lqf-2S-0dR"/>
+                        <outlet property="player2Btn" destination="Igh-3q-b2I" id="eZN-V2-h0M"/>
+                        <outlet property="player2SubtractBtn" destination="nu7-Du-CIq" id="z12-nA-0GT"/>
                         <outlet property="score1" destination="Ahs-sV-mvU" id="HC5-D3-s21"/>
                         <outlet property="score2" destination="uYD-5f-93E" id="ZKO-dB-Lu6"/>
                         <outlet property="skillLevelLabelp1" destination="kXm-xT-mNM" id="Qh6-Yt-8fI"/>
