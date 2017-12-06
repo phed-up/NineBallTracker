@@ -55,6 +55,7 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
         p1Label.text = sl1
         p2Label.text = sl2
         
+        
     }
     
     
@@ -66,7 +67,8 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     var player1SkillLevel = ""
     var player2SkillLevel = ""
-    
+    var nameP1 = ""
+    var nameP2 = ""
     
     @IBOutlet weak var p1Label: UILabel!
     @IBOutlet weak var p2Label: UILabel!
@@ -75,10 +77,16 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var sl1Picker: UIPickerView!
     @IBOutlet weak var sl2Picker: UIPickerView!
     
+    @IBOutlet weak var player1Name: UITextField!
+    @IBOutlet weak var player2Name: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
+        
         
     }
 
@@ -88,6 +96,8 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
     {
         
         performSegue(withIdentifier: "secondVC", sender: self)
+        
+
     }
     
     
@@ -99,8 +109,16 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
             destinationVC.p1SkillLevel = sl1
             destinationVC.p2SkillLevel = sl2
             
+            destinationVC.p1Name = player1Name.text!
+            destinationVC.p2Name = player2Name.text!
             
             
+            
+            
+            
+            
+            
+           
             
         }
     }

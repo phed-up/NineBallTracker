@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     var p1SkillLevel = ""
     var p2SkillLevel = ""
+    var p1Name = ""
+    var p2Name = ""
     
     var player1Score = 0
     var player2Score = 0
@@ -20,6 +22,10 @@ class ViewController: UIViewController {
     var player1RunningScore = 0
     var player2RUnningScore = 0
     var deadBallRunningScore = 0
+    
+    @IBOutlet weak var p1NameLabel: UILabel!
+    @IBOutlet weak var p2NameLabel: UILabel!
+    
     
     @IBOutlet weak var skillLevelLabelp1: UILabel!
     @IBOutlet weak var skillLevelLabelp2: UILabel!
@@ -94,6 +100,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var game9: UILabel!
     @IBOutlet weak var game10: UILabel!
     
+  
     
     
     
@@ -106,8 +113,12 @@ class ViewController: UIViewController {
 
         skillLevelLabelp1.text = p1SkillLevel
         skillLevelLabelp2.text = p2SkillLevel
+        p1NameLabel.text = p1Name
+        p2NameLabel.text = p2Name
         
         
+        
+       
        
     
     }
@@ -124,6 +135,7 @@ class ViewController: UIViewController {
         skillLevelReached()
         remainder()
         playSound(soundFileName: "ballSunk")
+        
         
 
 
@@ -492,30 +504,32 @@ class ViewController: UIViewController {
        
         if (skillLevelLabelp1.text == "1") && (score1.text == "16")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
+            
+            
 
         }
         
         if (skillLevelLabelp2.text == "1") && (score2.text == "16")
         {
+            
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
-
-
+        
 
         }
         
         if (skillLevelLabelp1.text == "2") && (score1.text == "21")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -523,10 +537,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "2") && (score2.text == "21")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -534,21 +548,20 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "3") && (score1.text == "27")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
-
 
 
         }
         
         if (skillLevelLabelp2.text == "3") && (score2.text == "27")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -556,10 +569,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "4") && (score1.text == "33")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -567,10 +580,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "4") && (score2.text == "33")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -578,10 +591,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "5") && (score1.text == "40")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -589,10 +602,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "5") && (score2.text == "40")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -600,10 +613,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "6") && (score1.text == "48")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -611,10 +624,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "6") && (score2.text == "48")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -622,10 +635,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "7") && (score1.text == "57")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -633,10 +646,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "7") && (score2.text == "57")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -644,10 +657,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "8") && (score1.text == "67")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -655,10 +668,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "8") && (score2.text == "67")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -666,10 +679,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "9") && (score1.text == "77")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -677,10 +690,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "9") && (score2.text == "77")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -688,10 +701,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp1.text == "10") && (score1.text == "87")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 1 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -699,10 +712,10 @@ class ViewController: UIViewController {
         
         if (skillLevelLabelp2.text == "10") && (score2.text == "87")
         {
+            hideButtons()
             winnerLabel.isHidden = false
             winnerLabel.text = "PLAYER 2 WINNER!"
             playSound(soundFileName: "Applause")
-            hideButtons()
 
 
 
@@ -834,6 +847,14 @@ class ViewController: UIViewController {
         player2SubtractBtn.backgroundColor = UIColor.clear
         deadBallBtn.backgroundColor = UIColor.clear
         deadBallSubtractBtn.backgroundColor = UIColor.clear
+        player1Btn.isEnabled = false
+        player1SubtractBtn.isEnabled = false
+        player2Btn.isEnabled = false
+        player2SubtractBtn.isEnabled = false
+        deadBallBtn.isEnabled = false
+        deadBallSubtractBtn.isEnabled = false
+        
+        
     }
 
 }
