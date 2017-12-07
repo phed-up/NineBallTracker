@@ -48,6 +48,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var deadBallBtn: UIButton!
     @IBOutlet weak var deadBallSubtractBtn: UIButton!
     
+    @IBOutlet weak var nameLabel1: UILabel!
+    @IBOutlet weak var nameLabel2: UILabel!
+    
+    
     
     @IBOutlet weak var p1_1: UILabel!
     @IBOutlet weak var p2_1: UILabel!
@@ -89,6 +93,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var p2_10: UILabel!
     @IBOutlet weak var d_10: UILabel!
     
+    @IBOutlet weak var p1_11: UILabel!
+    @IBOutlet weak var p2_11: UILabel!
+    @IBOutlet weak var d_11: UILabel!
+    
+    @IBOutlet weak var p1_12: UILabel!
+    @IBOutlet weak var p2_12: UILabel!
+    @IBOutlet weak var d_12: UILabel!
+    
+    @IBOutlet weak var p1_13: UILabel!
+    @IBOutlet weak var p2_13: UILabel!
+    @IBOutlet weak var d_13: UILabel!
+    
+    @IBOutlet weak var p1_14: UILabel!
+    @IBOutlet weak var p2_14: UILabel!
+    @IBOutlet weak var d_14: UILabel!
+    
+    
+    
     
     @IBOutlet weak var game1: UILabel!
     @IBOutlet weak var game2: UILabel!
@@ -100,6 +122,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var game8: UILabel!
     @IBOutlet weak var game9: UILabel!
     @IBOutlet weak var game10: UILabel!
+    @IBOutlet weak var game11: UILabel!
+    @IBOutlet weak var game12: UILabel!
+    @IBOutlet weak var game13: UILabel!
+    @IBOutlet weak var game14: UILabel!
     
   
     
@@ -111,13 +137,17 @@ class ViewController: UIViewController {
         
         resetScore()
         
+        
 
         skillLevelLabelp1.text = p1SkillLevel
         skillLevelLabelp2.text = p2SkillLevel
+       
         p1NameLabel.text = p1Name
         p2NameLabel.text = p2Name
+        nameLabel1.text = p1Name
+        nameLabel2.text = p2Name
         
-        
+        ballAmount()
         
        
        
@@ -307,10 +337,46 @@ class ViewController: UIViewController {
         
         if (player1Score + deadBall + player2Score) == 110
         {
+            game11.isHidden = false
             
             p1_10.text = "\(player1Score - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
             p2_10.text = "\(player2Score - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
             d_10.text = "\(deadBall - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+        }
+        
+        if (player1Score + deadBall + player2Score) == 121
+        {
+            game12.isHidden = false
+            
+            p1_11.text = "\(player1Score - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_11.text = "\(player2Score - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_11.text = "\(deadBall - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+        }
+        
+        if (player1Score + deadBall + player2Score) == 132
+        {
+            game13.isHidden = false
+            p1_12.text = "\(player1Score - Int(p1_11.text!)! - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_12.text = "\(player2Score - Int(p2_11.text!)! - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_12.text = "\(deadBall - Int(d_11.text!)! - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+        }
+        
+        if (player1Score + deadBall + player2Score) == 143
+        {
+            
+            game14.isHidden = false
+            
+            p1_13.text = "\(player1Score - Int(p1_12.text!)! - Int(p1_11.text!)! - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_13.text = "\(player2Score - Int(p2_12.text!)! - Int(p2_11.text!)! - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_13.text = "\(deadBall - Int(d_12.text!)! - Int(d_11.text!)! - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+        }
+        
+        if (player1Score + deadBall + player2Score) == 154
+        {
+            
+            p1_14.text = "\(player1Score - Int(p1_13.text!)! - Int(p1_12.text!)! - Int(p1_11.text!)! - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_14.text = "\(player2Score - Int(p2_13.text!)! - Int(p2_12.text!)! - Int(p2_11.text!)! - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_14.text = "\(deadBall - Int(d_13.text!)! - Int(d_12.text!)! - Int(d_11.text!)! - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
         }
         
         
@@ -433,9 +499,56 @@ class ViewController: UIViewController {
             p2_10.text = "\(player2Score - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
             d_10.text = "\(deadBall - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
             
-            
+            game11.backgroundColor = UIColor.clear
             game10.backgroundColor = UIColor.magenta
             game9.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 110) && (Int(ballCount.text!)! < 121)
+        {
+            p1_11.text = "\(player1Score - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_11.text = "\(player2Score - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_11.text = "\(deadBall - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            
+            game12.backgroundColor = UIColor.clear
+            game11.backgroundColor = UIColor.magenta
+            game10.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 121) && (Int(ballCount.text!)! < 132)
+        {
+            p1_12.text = "\(player1Score - Int(p1_11.text!)! - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_12.text = "\(player2Score - Int(p2_11.text!)! - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_12.text = "\(deadBall - Int(d_11.text!)! - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            
+            game13.backgroundColor = UIColor.clear
+            game12.backgroundColor = UIColor.magenta
+            game11.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 132) && (Int(ballCount.text!)! < 143)
+        {
+            p1_13.text = "\(player1Score - Int(p1_12.text!)! - Int(p1_11.text!)! - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_13.text = "\(player2Score - Int(p2_12.text!)! - Int(p2_11.text!)! - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_13.text = "\(deadBall - Int(d_12.text!)! - Int(d_11.text!)! - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            
+            game14.backgroundColor = UIColor.clear
+            game13.backgroundColor = UIColor.magenta
+            game12.backgroundColor = UIColor.clear
+        }
+        
+        if (Int(ballCount.text!)! >= 143) && (Int(ballCount.text!)! < 154)
+        {
+            p1_14.text = "\(player1Score - Int(p1_13.text!)! - Int(p1_12.text!)! - Int(p1_11.text!)! - Int(p1_10.text!)! - Int(p1_9.text!)! - Int(p1_8.text!)! - Int(p1_7.text!)! - Int(p1_6.text!)! - Int(p1_5.text!)! - Int(p1_4.text!)! - Int(p1_3.text!)! - Int(p1_2.text!)! - Int(p1_1.text!)!)"
+            p2_14.text = "\(player2Score - Int(p2_13.text!)! - Int(p2_12.text!)! - Int(p2_11.text!)! - Int(p2_10.text!)! - Int(p2_9.text!)! - Int(p2_8.text!)! - Int(p2_7.text!)! - Int(p2_6.text!)! - Int(p2_5.text!)! - Int(p2_4.text!)! - Int(p2_3.text!)! - Int(p2_2.text!)! - Int(p2_1.text!)!)"
+            d_14.text = "\(deadBall - Int(d_13.text!)! - Int(d_12.text!)! - Int(d_11.text!)! - Int(d_10.text!)! - Int(d_9.text!)! - Int(d_8.text!)! - Int(d_7.text!)! - Int(d_6.text!)! - Int(d_5.text!)! - Int(d_4.text!)! - Int(d_3.text!)! - Int(d_2.text!)! - Int(d_1.text!)!)"
+            
+            
+            game14.backgroundColor = UIColor.magenta
+            game13.backgroundColor = UIColor.clear
         }
         
         
@@ -461,6 +574,10 @@ class ViewController: UIViewController {
         p1_8.text = ""
         p1_9.text = ""
         p1_10.text = ""
+        p1_11.text = ""
+        p1_12.text = ""
+        p1_13.text = ""
+        p1_14.text = ""
         
         p2_1.text = ""
         p2_2.text = ""
@@ -472,6 +589,11 @@ class ViewController: UIViewController {
         p2_8.text = ""
         p2_9.text = ""
         p2_10.text = ""
+        p2_11.text = ""
+        p2_12.text = ""
+        p2_13.text = ""
+        p2_13.text = ""
+        p2_14.text = ""
         
         d_1.text = ""
         d_2.text = ""
@@ -483,6 +605,10 @@ class ViewController: UIViewController {
         d_8.text = ""
         d_9.text = ""
         d_10.text = ""
+        d_11.text = ""
+        d_12.text = ""
+        d_13.text = ""
+        d_14.text = ""
         
 
         game2.isHidden = true
@@ -494,6 +620,10 @@ class ViewController: UIViewController {
         game8.isHidden = true
         game9.isHidden = true
         game10.isHidden = true
+        game11.isHidden = true
+        game12.isHidden = true
+        game13.isHidden = true
+        game14.isHidden = true
         
         winnerLabel.isHidden = true
         winnerNameLabel.isHidden = true
@@ -835,6 +965,109 @@ class ViewController: UIViewController {
         playSound(soundFileName: "Applause")
     }
 
+    
+    func ballAmount()
+    {
+        if skillLevelLabelp1.text == "1"
+        {
+            p1Remainder.text = "16"
+        }
+        
+        if skillLevelLabelp2.text == "1"
+        {
+            p2Remainder.text = "16"
+        }
+        
+        if skillLevelLabelp1.text == "2"
+        {
+            p1Remainder.text = "21"
+        }
+        
+        if skillLevelLabelp2.text == "2"
+        {
+            p2Remainder.text = "21"
+        }
+        
+        if skillLevelLabelp1.text == "3"
+        {
+            p1Remainder.text = "27"
+        }
+        
+        if skillLevelLabelp2.text == "3"
+        {
+            p2Remainder.text = "27"
+        }
+        
+        if skillLevelLabelp1.text == "4"
+        {
+            p1Remainder.text = "33"
+        }
+        
+        if skillLevelLabelp2.text == "4"
+        {
+            p2Remainder.text = "33"
+        }
+        
+        if skillLevelLabelp1.text == "5"
+        {
+            p1Remainder.text = "40"
+        }
+        
+        if skillLevelLabelp2.text == "5"
+        {
+            p2Remainder.text = "40"
+        }
+        
+        if skillLevelLabelp1.text == "6"
+        {
+            p1Remainder.text = "48"
+        }
+        
+        if skillLevelLabelp2.text == "6"
+        {
+            p2Remainder.text = "48"
+        }
+        
+        if skillLevelLabelp1.text == "7"
+        {
+            p1Remainder.text = "57"
+        }
+        
+        if skillLevelLabelp2.text == "7"
+        {
+            p2Remainder.text = "57"
+        }
+        
+        if skillLevelLabelp1.text == "8"
+        {
+            p1Remainder.text = "67"
+        }
+        
+        if skillLevelLabelp2.text == "8"
+        {
+            p2Remainder.text = "67"
+        }
+        
+        if skillLevelLabelp1.text == "9"
+        {
+            p1Remainder.text = "77"
+        }
+        
+        if skillLevelLabelp2.text == "9"
+        {
+            p2Remainder.text = "77"
+        }
+        
+        if skillLevelLabelp1.text == "10"
+        {
+            p1Remainder.text = "87"
+        }
+        
+        if skillLevelLabelp2.text == "10"
+        {
+            p2Remainder.text = "87"
+        }
+    }
 }
 
 
