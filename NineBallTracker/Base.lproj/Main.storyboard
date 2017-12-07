@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="6jG-Bg-WPX" userLabel="Picker">
-                                <rect key="frame" x="84.5" y="80" width="400" height="160"/>
+                                <rect key="frame" x="84" y="80" width="400" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GiV-bW-GZA" userLabel="PickerP1">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="160"/>
@@ -121,7 +121,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxb-fe-TSg">
-                                <rect key="frame" x="309.5" y="40" width="180" height="30"/>
+                                <rect key="frame" x="309" y="40" width="180" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4sC-4K-vDG"/>
                                     <constraint firstAttribute="width" constant="180" id="jtH-kv-qeX"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJM-Vj-zxn">
-                                <rect key="frame" x="79.5" y="40" width="180" height="30"/>
+                                <rect key="frame" x="79" y="40" width="180" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="PpF-2D-uRz"/>
                                     <constraint firstAttribute="height" constant="30" id="T5m-Ac-YFo"/>
@@ -940,6 +940,21 @@
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="30"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-OI-zZb" userLabel="WinnerLabels">
+                                <rect key="frame" x="34" y="169" width="500" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tov-TY-yu6">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="3Vi-j3-fa3"/>
+                                            <constraint firstAttribute="height" constant="60" id="AGz-Pq-e9F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BRQ-hJ-xQl" userLabel="ScoreButtons">
                                 <rect key="frame" x="84" y="124" width="400" height="151"/>
                                 <subviews>
@@ -1107,6 +1122,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="100"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-29-ZIl">
                                 <rect key="frame" x="20" y="285" width="50" height="25"/>
@@ -1149,31 +1165,6 @@
                                     <constraint firstAttribute="width" constant="60" id="CXf-hu-dPJ"/>
                                     <constraint firstItem="n4Y-PN-Xmw" firstAttribute="centerY" secondItem="kXm-xT-mNM" secondAttribute="centerY" id="sjQ-UN-Kal"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-OI-zZb" userLabel="WinnerLabels">
-                                <rect key="frame" x="24" y="169.5" width="520" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tov-TY-yu6">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="AGz-Pq-e9F"/>
-                                            <constraint firstAttribute="width" constant="250" id="Q35-Xp-5QS"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-9D-5M1">
-                                        <rect key="frame" x="270" y="0.0" width="250" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="mfI-ME-lma"/>
-                                            <constraint firstAttribute="height" constant="60" id="wL4-4e-ivy"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1268,7 +1259,6 @@
                         <outlet property="score2" destination="uYD-5f-93E" id="ZKO-dB-Lu6"/>
                         <outlet property="skillLevelLabelp1" destination="kXm-xT-mNM" id="Qh6-Yt-8fI"/>
                         <outlet property="skillLevelLabelp2" destination="n4Y-PN-Xmw" id="R4s-c2-cbP"/>
-                        <outlet property="winnerLabel" destination="9zl-9D-5M1" id="kp1-6K-FaQ"/>
                         <outlet property="winnerNameLabel" destination="tov-TY-yu6" id="HQz-9H-sfg"/>
                     </connections>
                 </viewController>

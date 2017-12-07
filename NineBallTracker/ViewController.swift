@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var skillLevelLabelp1: UILabel!
     @IBOutlet weak var skillLevelLabelp2: UILabel!
-    @IBOutlet weak var winnerLabel: UILabel!
+//    @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var winnerNameLabel: UILabel!
     
 
@@ -625,7 +625,7 @@ class ViewController: UIViewController {
         game13.isHidden = true
         game14.isHidden = true
         
-        winnerLabel.isHidden = true
+//        winnerLabel.isHidden = true
         winnerNameLabel.isHidden = true
         
     }
@@ -951,17 +951,17 @@ class ViewController: UIViewController {
     
     func player1Win()
     {
-        winnerLabel.isHidden = false
+//        winnerLabel.isHidden = false
         winnerNameLabel.isHidden = false
-        winnerNameLabel.text = p1Name
+        winnerNameLabel.text = "\(p1Name) Wins!"
         playSound(soundFileName: "Applause")
     }
     
     func player2Win()
     {
-        winnerLabel.isHidden = false
+//        winnerLabel.isHidden = false
         winnerNameLabel.isHidden = false
-        winnerNameLabel.text = p2Name
+        winnerNameLabel.text = "\(p2Name) Wins!"
         playSound(soundFileName: "Applause")
     }
 
