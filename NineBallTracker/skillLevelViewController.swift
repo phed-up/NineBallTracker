@@ -95,13 +95,14 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var player1Name: UITextField!
     @IBOutlet weak var player2Name: UITextField!
     
+    @IBOutlet weak var errorLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
+        errorLabel.isHidden = true
         
     }
 
@@ -110,8 +111,25 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBAction func startBtnPressed(_ sender: UIButton)
     {
         
+        if p1Label.text == "0" && p2Label.text != "0"
+        {
+            errorLabel.isHidden = false
+            errorLabel.text = "Please select a skill level for Player 1"
+        }
+        else if p2Label.text == "0" && p1Label.text != "0"
+        {
+            errorLabel.isHidden = false
+            errorLabel.text = "Please select a skill level for Player 2"
+        }
+        else if p1Label.text == "0" && p2Label.text == "0"
+        {
+            errorLabel.isHidden = false
+            errorLabel.text = "Please select a skill level for Player 1 and Player 2"
+        }
+        else
+        {
         performSegue(withIdentifier: "secondVC", sender: self)
-        
+        }
 
     }
     

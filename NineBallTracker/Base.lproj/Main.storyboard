@@ -149,6 +149,12 @@
                                     <outlet property="delegate" destination="MEJ-Db-oDd" id="FrE-c7-U8Q"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4y-R8-sSq">
+                                <rect key="frame" x="262" y="234.5" width="44.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -158,12 +164,15 @@
                             <constraint firstItem="6jG-Bg-WPX" firstAttribute="centerX" secondItem="wtQ-m9-F5B" secondAttribute="centerX" id="EWs-w8-qip"/>
                             <constraint firstItem="6jG-Bg-WPX" firstAttribute="top" secondItem="ZJM-Vj-zxn" secondAttribute="bottom" constant="10" id="Jxm-22-3Fw"/>
                             <constraint firstItem="6jG-Bg-WPX" firstAttribute="top" secondItem="pxb-fe-TSg" secondAttribute="bottom" constant="10" id="N6o-Rz-H2c"/>
+                            <constraint firstItem="K4y-R8-sSq" firstAttribute="centerX" secondItem="wtQ-m9-F5B" secondAttribute="centerX" id="cdt-uu-bIx"/>
                             <constraint firstItem="ZJM-Vj-zxn" firstAttribute="centerX" secondItem="n0C-Fh-XHD" secondAttribute="centerX" id="gOF-Qx-elH"/>
+                            <constraint firstItem="1YK-0r-zlf" firstAttribute="top" secondItem="K4y-R8-sSq" secondAttribute="bottom" constant="15" id="jHL-xS-lXy"/>
                             <constraint firstItem="yth-KS-3fa" firstAttribute="bottom" secondItem="1YK-0r-zlf" secondAttribute="bottom" constant="20" id="k9p-Tm-iGZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yth-KS-3fa"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="K4y-R8-sSq" id="boL-xi-EXI"/>
                         <outlet property="p1Label" destination="twI-H2-aw0" id="fNP-5J-NqT"/>
                         <outlet property="p2Label" destination="DUB-Pn-W2c" id="xzS-45-LRa"/>
                         <outlet property="player1Name" destination="ZJM-Vj-zxn" id="QZx-OM-RnZ"/>
@@ -175,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7M-Ar-5Ta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1002" y="163"/>
+            <point key="canvasLocation" x="-1002.4647887323944" y="161.25"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
