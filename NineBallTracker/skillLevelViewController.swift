@@ -114,17 +114,17 @@ class skillLevelViewController: UIViewController, UIPickerViewDataSource, UIPick
         if p1Label.text == "0" && p2Label.text != "0"
         {
             errorLabel.isHidden = false
-            errorLabel.text = "Please select a skill level for Player 1"
+            errorLabel.text = "Please select a skill level for \(player1Name.text!)"
         }
         else if p2Label.text == "0" && p1Label.text != "0"
         {
             errorLabel.isHidden = false
-            errorLabel.text = "Please select a skill level for Player 2"
+            errorLabel.text = "Please select a skill level for \(player2Name.text!)"
         }
         else if p1Label.text == "0" && p2Label.text == "0"
         {
             errorLabel.isHidden = false
-            errorLabel.text = "Please select a skill level for Player 1 and Player 2"
+            errorLabel.text = "Please select a skill level for \(player1Name.text!) and \(player2Name.text!)"
         }
         else
         {
