@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     var player2RUnningScore = 0
     var deadBallRunningScore = 0
     
+    var loserScore = 0
+    var loserSkillLevel = 0
+    
     @IBOutlet weak var p1NameLabel: UILabel!
     @IBOutlet weak var p2NameLabel: UILabel!
     
@@ -31,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var skillLevelLabelp2: UILabel!
 //    @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var winnerNameLabel: UILabel!
+    @IBOutlet weak var finalScoreLabel: UILabel!
     
 
     @IBOutlet weak var score1: UILabel!
@@ -625,8 +629,9 @@ class ViewController: UIViewController {
         game13.isHidden = true
         game14.isHidden = true
         
-//        winnerLabel.isHidden = true
+
         winnerNameLabel.isHidden = true
+        finalScoreLabel.isHidden = true
         
     }
     
@@ -951,18 +956,28 @@ class ViewController: UIViewController {
     
     func player1Win()
     {
-//        winnerLabel.isHidden = false
+
         winnerNameLabel.isHidden = false
         winnerNameLabel.text = "\(p1Name) Wins!"
         playSound(soundFileName: "Applause")
+        
+        finalScoreLabel.isHidden = false
+        loserScore = Int(score2.text!)!
+        loserSkillLevel = Int(skillLevelLabelp2.text!)!
+        finalScore()
     }
     
     func player2Win()
     {
-//        winnerLabel.isHidden = false
+
         winnerNameLabel.isHidden = false
         winnerNameLabel.text = "\(p2Name) Wins!"
         playSound(soundFileName: "Applause")
+        
+        loserScore = Int(score1.text!)!
+        loserSkillLevel = Int(skillLevelLabelp1.text!)!
+        finalScoreLabel.isHidden = false
+        finalScore()
     }
 
     
@@ -1067,6 +1082,555 @@ class ViewController: UIViewController {
         {
             p2Remainder.text = "87"
         }
+    }
+    
+    func finalScore()
+    {
+        //Skill Level 1
+        if loserSkillLevel == 1
+        {
+            if loserScore < 4
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 4 && loserScore <= 5
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 6 && loserScore <= 7
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 8 && loserScore <= 9
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore == 10
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore == 11
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore == 12
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore == 13
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore == 14
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore == 15
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        
+        //Skill Level 2
+        if loserSkillLevel == 2
+        {
+            if loserScore < 5
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 5 && loserScore <= 6
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 7 && loserScore <= 8
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 9 && loserScore <= 10
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 11 && loserScore <= 12
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 13 && loserScore <= 14
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 15 && loserScore <= 16
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 17 && loserScore <= 18
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore == 19
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore == 20
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 3
+        if loserSkillLevel == 3
+        {
+            if loserScore < 6
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 6 && loserScore <= 8
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 9 && loserScore <= 11
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 12 && loserScore <= 14
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 15 && loserScore <= 16
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 17 && loserScore <= 18
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 19 && loserScore <= 20
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 21 && loserScore <= 22
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 23 && loserScore <= 24
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 25 && loserScore <= 26
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 4
+        if loserSkillLevel == 4
+        {
+            if loserScore < 7
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 7 && loserScore <= 9
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 10 && loserScore <= 12
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 13 && loserScore <= 15
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 16 && loserScore <= 18
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 19 && loserScore <= 21
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 22 && loserScore <= 24
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 25 && loserScore <= 27
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 28 && loserScore <= 30
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 31 && loserScore <= 32
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 5
+        if loserSkillLevel == 5
+        {
+            if loserScore < 8
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 8 && loserScore <= 11
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 12 && loserScore <= 15
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 16 && loserScore <= 19
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 20 && loserScore <= 23
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 24 && loserScore <= 27
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 28 && loserScore <= 30
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 31 && loserScore <= 33
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 34 && loserScore <= 36
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 37 && loserScore <= 39
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 6
+        if loserSkillLevel == 6
+        {
+            if loserScore < 10
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 10 && loserScore <= 14
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 15 && loserScore <= 19
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 20 && loserScore <= 23
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 24 && loserScore <= 27
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 28 && loserScore <= 31
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 32 && loserScore <= 35
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 36 && loserScore <= 39
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 40 && loserScore <= 43
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 44 && loserScore <= 47
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 7
+        if loserSkillLevel == 7
+        {
+            if loserScore < 12
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 12 && loserScore <= 16
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 17 && loserScore <= 21
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 22 && loserScore <= 26
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 27 && loserScore <= 31
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 32 && loserScore <= 36
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 37 && loserScore <= 41
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 42 && loserScore <= 46
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 47 && loserScore <= 51
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 52 && loserScore <= 56
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 8
+        if loserSkillLevel == 8
+        {
+            if loserScore < 15
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 15 && loserScore <= 20
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 21 && loserScore <= 26
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 27 && loserScore <= 32
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 33 && loserScore <= 38
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 39 && loserScore <= 44
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 45 && loserScore <= 50
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 51 && loserScore <= 56
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 57 && loserScore <= 61
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 62 && loserScore <= 66
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 9
+        if loserSkillLevel == 9
+        {
+            if loserScore < 19
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 19 && loserScore <= 25
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 26 && loserScore <= 32
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 33 && loserScore <= 39
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 40 && loserScore <= 46
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 47 && loserScore <= 52
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 53 && loserScore <= 58
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 59 && loserScore <= 64
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 65 && loserScore <= 70
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 71 && loserScore <= 76
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+        //Skill Level 10
+        if loserSkillLevel == 10
+        {
+            if loserScore < 24
+            {
+                finalScoreLabel.text = "20/0"
+            }
+            
+            if loserScore >= 24 && loserScore <= 30
+            {
+                finalScoreLabel.text = "19/1"
+            }
+            
+            if loserScore >= 31 && loserScore <= 37
+            {
+                finalScoreLabel.text = "18/2"
+            }
+            
+            if loserScore >= 38 && loserScore <= 44
+            {
+                finalScoreLabel.text = "17/3"
+            }
+            
+            if loserScore >= 45 && loserScore <= 51
+            {
+                finalScoreLabel.text = "16/4"
+            }
+            
+            if loserScore >= 52 && loserScore <= 58
+            {
+                finalScoreLabel.text = "15/5"
+            }
+            
+            if loserScore >= 59 && loserScore <= 65
+            {
+                finalScoreLabel.text = "14/6"
+            }
+            
+            if loserScore >= 66 && loserScore <= 72
+            {
+                finalScoreLabel.text = "13/7"
+            }
+            
+            if loserScore >= 73 && loserScore <= 79
+            {
+                finalScoreLabel.text = "12/8"
+            }
+            
+            if loserScore >= 80 && loserScore <= 86
+            {
+                finalScoreLabel.text = "11/9"
+            }
+        }
+        
+       
+        
+        
+        
     }
 }
 
