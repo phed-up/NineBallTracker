@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var skillLevelLabelp1: UILabel!
     @IBOutlet weak var skillLevelLabelp2: UILabel!
-//    @IBOutlet weak var winnerLabel: UILabel!
+
     @IBOutlet weak var winnerNameLabel: UILabel!
     @IBOutlet weak var finalScoreLabel: UILabel!
     
